@@ -1,42 +1,49 @@
-# Create React Express App
+# New York Times Article Search and Save
 
-## About This Boilerplate
+This project is a full-stack web app using MERN stack. Mern uses the 4 main libraries of:
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+* MongoDB
+* Express.js
+* React
+* Node.js
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+In addition to those powerful libraries, this app also uses smaller ones to help with the routing process of a full-stack website.
 
-## Starting the app locally
+These include: axios, ajax, mongoose, nodemon, concurrently, react-router-dom, awesome-fonts, and bootstrap.
 
-Start by installing front and backend dependencies. While in this directory, run the following commands:
+It is a simple app to use, and an inportant one if someone is an avid reader of the New York Newspaper or a student looking to cite specific articles on a specific topic. This is a quick run down of how it works.
 
-```
-yarn install
-cd client
-yarn install
-cd ..
-``
+## Start
 
-After both installations complete, run the following command in your terminal:
+![start](https://i.imgur.com/2fLdnFq.png)
 
-```
-yarn start
-```
+So the first thing we will do is find a topic to search for. In this case, we will look for any topics on broken eyeglasses. Because I just broke mine. Remarkable...
 
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+Soon after, our page will be populated with articles, depending on the range of dates that you searched for.
 
-## Deployment (Heroku)
+And look at that we have a query of items! Let's see what the first one is.
 
-After confirming that you have an up to date git repository and a Heroku app created, complete the following:
+![results](https://i.imgur.com/DUdtnjU.png)
 
-1. Build the React app for production by running the following command:
+oh...
 
-```
-yarn build
-```
+That's not a very delightful news article. Ruin my day with a hard truth.
 
-2. Add and commit all changes to git
+Meanwhile, some interesting things are happenign in the backend. With the help of mongoose, we were able to automatically add all the information from the New York Times API, and from our decision to save the article, to the Mongo Database.
 
-3. Push to Heroku
+![database](https://i.imgur.com/QDriYdK.png)
 
-If all previous steps were followed correctly, your application should be deployed to Heroku!
+This will happen every time we add a new article to our saved ones. This is incredibly important so as to save the state of our saved articles every time. 
+
+In addition to this, we can look at the saved article on our front end.
+
+![savedarticle](https://i.imgur.com/RFoyWiH.png) 
+
+As you can see, we can also delete an article from our saved list. This will also delete the entry from our database. 
+
+## Conclusion
+
+I use this app on my own occasion sometimes when I want to cite something from a news article. I'm hoping to add more functionality to this app to include a multitude of different API's for sourcing purposes. I think it would turn out to be an incredibly wonderful app once everything is finished in my eyes.
+
+
+
